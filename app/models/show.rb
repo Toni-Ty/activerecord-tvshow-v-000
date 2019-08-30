@@ -10,11 +10,11 @@ def self.lowest_rating
 end
 
 def self.most_popular_show
-  self.where("rating = ?", self.highest_rating).first
+  self.where(rating: :desc).first
 end
 
 def self.least_popular_show
-  self.where("rating = ?", self.lowest_rating).first
+  self.where(rating: :asc).first
 end
 
 def self.ratings_sum
