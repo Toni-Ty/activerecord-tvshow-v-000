@@ -7,3 +7,6 @@ end
 
 def Show:::most_popular_show
   self.where("rating = ?", self.highest_rating).first
+end
+
+def Show::
